@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reporting – Omada A/S</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Arial Nova',Arial,Helvetica,sans-serif;background:#f5f7fa;color:#323232;font-size:14px;line-height:1.6}
+:root{--sb:#32445B;--ag:#58C1A1;--ins:#1E7C88;--ch:#E4E4E4;--cc:#C4CCDE;--dl:#323232;--ml:#5C5A5B;--saft:#E87A54;--white:#fff}
+.nav{background:var(--sb);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.nav-brand{color:var(--ag);font-weight:700;font-size:16px}
+.page-header{background:var(--sb);padding:48px 40px;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(88,193,161,.12);border:40px solid rgba(88,193,161,.08)}
+.page-header .badge{display:inline-block;background:var(--ag);color:var(--sb);font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:12px}
+.page-header h1{color:#fff;font-size:28px;font-weight:700;margin-bottom:6px}
+.page-header p{color:rgba(255,255,255,.7)}
+.container{max-width:1100px;margin:0 auto;padding:60px 32px}
+.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.report-card{background:#fff;border-radius:14px;border:1px solid var(--ch);overflow:hidden;box-shadow:0 2px 12px rgba(50,68,91,.07);transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.report-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(50,68,91,.14)}
+.rc-header{padding:28px 28px 20px;display:flex;align-items:center;gap:16px}
+.rc-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.rc-title{font-size:17px;font-weight:700;color:var(--sb)}
+.rc-subtitle{font-size:11px;color:var(--ml);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.rc-body{padding:0 28px 24px;font-size:13px;color:var(--ml);line-height:1.7;flex:1}
+.rc-footer{padding:14px 28px;background:#f8f9fb;border-top:1px solid var(--ch);font-size:11px;color:var(--ml);display:flex;justify-content:space-between;align-items:center}
+.rc-footer .tag{display:inline-block;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:600}
+.tag-green{background:#e6f9f3;color:#1a8060}
+.tag-blue{background:#e3f0fb;color:#005a9e}
+.tag-orange{background:#fff0e8;color:#b85a28}
+.tag-purple{background:#f0eafc;color:#5230a0}
+footer{background:var(--sb);color:rgba(255,255,255,.5);text-align:center;padding:20px;font-size:12px;margin-top:80px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">&#10022; Omada</div>
+</nav>
+
+<div class="page-header">
+  <div class="badge">REPORTING PORTAL</div>
+  <h1>Omada AI Reporting</h1>
+  <p>Select a reporting area below to explore</p>
+</div>
+
+<div class="container">
+  <div class="report-grid">
+
+    <a class="report-card" href="/chatgpt/Analytics_Index.html">
+      <div class="rc-header">
+        <div class="rc-icon" style="background:#10A37F;color:#fff">&#9670;</div>
+        <div>
+          <div class="rc-title">ChatGPT</div>
+          <div class="rc-subtitle">OpenAI · Enterprise</div>
+        </div>
+      </div>
+      <div class="rc-body">Usage analytics, user segments, conversation trends, and adoption reporting for Omada's ChatGPT Enterprise deployment.</div>
+      <div class="rc-footer"><span class="tag tag-green">Analytics</span><span>→</span></div>
+    </a>
+
+    <a class="report-card" href="/copilot/Analytics_Index.html">
+      <div class="rc-header">
+        <div class="rc-icon" style="background:#0078D4;color:#fff">&#9632;</div>
+        <div>
+          <div class="rc-title">Copilot</div>
+          <div class="rc-subtitle">Microsoft · Enterprise</div>
+        </div>
+      </div>
+      <div class="rc-body">Usage analytics, user segments, conversation trends, and adoption reporting for Omada's Microsoft Copilot Enterprise deployment.</div>
+      <div class="rc-footer"><span class="tag tag-blue">Analytics</span><span>→</span></div>
+    </a>
+
+    <a class="report-card" href="/matrix/ai-license-summary.html">
+      <div class="rc-header">
+        <div class="rc-icon" style="background:#6e40c9;color:#fff">&#9698;</div>
+        <div>
+          <div class="rc-title">AI Licenses</div>
+          <div class="rc-subtitle">Omada Identity · All Tools</div>
+        </div>
+      </div>
+      <div class="rc-body">License coverage across all onboarded AI tools — ChatGPT Enterprise, GitHub Copilot, Microsoft Copilot M365, Claude AI, Clari Copilot, and Google Workspace AI.</div>
+      <div class="rc-footer"><span class="tag tag-purple">License Matrix</span><span>→</span></div>
+    </a>
+
+
+    <a class="report-card" href="https://reporting.omada.net/cost/ai-cost-explorer.html">
+      <div class="rc-header">
+        <div class="rc-icon" style="background:#32445B;color:#58C1A1">&#36;</div>
+        <div>
+          <div class="rc-title">AI Costs</div>
+          <div class="rc-subtitle">All Tools · Portfolio View</div>
+        </div>
+      </div>
+      <div class="rc-body">License cost analysis across all AI tools — per-seat rates, annual spend, contract renewals, and cost breakdown by user, department, and division.</div>
+      <div class="rc-footer"><span class="tag tag-orange">Cost Report</span><span>→</span></div>
+    </a>
+
+  </div>
+</div>
+
+<footer>Omada A/S &nbsp;|&nbsp; AI Reporting Portal &nbsp;|&nbsp; Confidential</footer>
+</body>
+</html>
