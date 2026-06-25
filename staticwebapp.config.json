@@ -31,6 +31,5 @@
     "X-Frame-Options": "DENY",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
-  },
-  "responseOverrides_comment": "401 sends unauthenticated users straight to Entra login instead of showing the built-in provider chooser."
+  }
 }
