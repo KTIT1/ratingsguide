@@ -1,103 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Reporting – Omada A/S</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Arial Nova',Arial,Helvetica,sans-serif;background:#f5f7fa;color:#323232;font-size:14px;line-height:1.6}
-:root{--sb:#32445B;--ag:#58C1A1;--ins:#1E7C88;--ch:#E4E4E4;--cc:#C4CCDE;--dl:#323232;--ml:#5C5A5B;--saft:#E87A54;--white:#fff}
-.nav{background:var(--sb);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-.nav-brand{color:var(--ag);font-weight:700;font-size:16px}
-.page-header{background:var(--sb);padding:48px 40px;position:relative;overflow:hidden}
-.page-header::before{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(88,193,161,.12);border:40px solid rgba(88,193,161,.08)}
-.page-header .badge{display:inline-block;background:var(--ag);color:var(--sb);font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:12px}
-.page-header h1{color:#fff;font-size:28px;font-weight:700;margin-bottom:6px}
-.page-header p{color:rgba(255,255,255,.7)}
-.container{max-width:1100px;margin:0 auto;padding:60px 32px}
-.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.report-card{background:#fff;border-radius:14px;border:1px solid var(--ch);overflow:hidden;box-shadow:0 2px 12px rgba(50,68,91,.07);transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
-.report-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(50,68,91,.14)}
-.rc-header{padding:28px 28px 20px;display:flex;align-items:center;gap:16px}
-.rc-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
-.rc-title{font-size:17px;font-weight:700;color:var(--sb)}
-.rc-subtitle{font-size:11px;color:var(--ml);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
-.rc-body{padding:0 28px 24px;font-size:13px;color:var(--ml);line-height:1.7;flex:1}
-.rc-footer{padding:14px 28px;background:#f8f9fb;border-top:1px solid var(--ch);font-size:11px;color:var(--ml);display:flex;justify-content:space-between;align-items:center}
-.rc-footer .tag{display:inline-block;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:600}
-.tag-green{background:#e6f9f3;color:#1a8060}
-.tag-blue{background:#e3f0fb;color:#005a9e}
-.tag-orange{background:#fff0e8;color:#b85a28}
-.tag-purple{background:#f0eafc;color:#5230a0}
-footer{background:var(--sb);color:rgba(255,255,255,.5);text-align:center;padding:20px;font-size:12px;margin-top:80px}
-</style>
-</head>
-<body>
-
-<nav class="nav">
-  <div class="nav-brand">&#10022; Omada</div>
-</nav>
-
-<div class="page-header">
-  <div class="badge">REPORTING PORTAL</div>
-  <h1>Omada AI Reporting</h1>
-  <p>Select a reporting area below to explore</p>
-</div>
-
-<div class="container">
-  <div class="report-grid">
-
-    <a class="report-card" href="/chatgpt/Analytics_Index.html">
-      <div class="rc-header">
-        <div class="rc-icon" style="background:#10A37F;color:#fff">&#9670;</div>
-        <div>
-          <div class="rc-title">ChatGPT</div>
-          <div class="rc-subtitle">OpenAI · Enterprise</div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Omada Performance Ratings</title>
+    <meta
+      name="description"
+      content="A practical guide for managers using performance drivers, rating anchors, and evidence-based calibration questions."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#overview" aria-label="Omada Performance Ratings home">
+          <span class="brand-mark" aria-hidden="true">OP</span>
+          <span>
+            <strong>Omada Performance Ratings</strong>
+            <small>Performance rating guide</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#drivers">Drivers</a>
+          <a href="#scoring">Scoring</a>
+          <a href="#scale">Rating Scale</a>
+          <a href="#guidance">Guidance</a>
+          <a href="#evidence">Evidence</a>
         </div>
-      </div>
-      <div class="rc-body">Usage analytics, user segments, conversation trends, and adoption reporting for Omada's ChatGPT Enterprise deployment.</div>
-      <div class="rc-footer"><span class="tag tag-green">Analytics</span><span>→</span></div>
-    </a>
+      </nav>
 
-    <a class="report-card" href="/copilot/Analytics_Index.html">
-      <div class="rc-header">
-        <div class="rc-icon" style="background:#0078D4;color:#fff">&#9632;</div>
-        <div>
-          <div class="rc-title">Copilot</div>
-          <div class="rc-subtitle">Microsoft · Enterprise</div>
+      <section id="overview" class="hero" aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="eyebrow">Performance ratings reference</p>
+          <h1 id="page-title">Calibrate performance ratings with clearer evidence and judgement.</h1>
+          <p class="hero-copy">
+            Use the six key drivers, rating anchors, and supporting questions to evaluate sustained performance
+            relative to role expectations, not isolated successes, setbacks, visibility, communication style,
+            or personality traits.
+          </p>
+          <div class="hero-actions" aria-label="Quick actions">
+            <a class="button primary" href="#drivers">Explore drivers</a>
+            <a class="button secondary" href="#scale">Compare ratings</a>
+          </div>
         </div>
-      </div>
-      <div class="rc-body">Usage analytics, user segments, conversation trends, and adoption reporting for Omada's Microsoft Copilot Enterprise deployment.</div>
-      <div class="rc-footer"><span class="tag tag-blue">Analytics</span><span>→</span></div>
-    </a>
+        <aside class="rating-visual" aria-label="Rating principles summary">
+          <div class="rating-steps">
+            <div class="rating-step low">
+              <span>1-2</span>
+              <strong>Below Expectations</strong>
+              <small>Inconsistent or sustained underperformance</small>
+            </div>
+            <div class="rating-step anchor">
+              <span>3</span>
+              <strong>Strong Performance</strong>
+              <small>Fully successful at expected role scope</small>
+            </div>
+            <div class="rating-step high">
+              <span>4-5</span>
+              <strong>Stretch Performance</strong>
+              <small>Sustained impact beyond expectations</small>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </header>
 
-    <a class="report-card" href="/matrix/ai-license-summary.html">
-      <div class="rc-header">
-        <div class="rc-icon" style="background:#6e40c9;color:#fff">&#9698;</div>
-        <div>
-          <div class="rc-title">AI Licenses</div>
-          <div class="rc-subtitle">Omada Identity · All Tools</div>
+    <main>
+      <section class="section principles" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="eyebrow">Rating philosophy</p>
+          <h2 id="principles-title">The calibration baseline</h2>
         </div>
-      </div>
-      <div class="rc-body">License coverage across all onboarded AI tools — ChatGPT Enterprise, GitHub Copilot, Microsoft Copilot M365, Claude AI, Clari Copilot, and Google Workspace AI.</div>
-      <div class="rc-footer"><span class="tag tag-purple">License Matrix</span><span>→</span></div>
-    </a>
-
-
-    <a class="report-card" href="https://reporting.omada.net/cost/ai-cost-explorer.html">
-      <div class="rc-header">
-        <div class="rc-icon" style="background:#32445B;color:#58C1A1">&#36;</div>
-        <div>
-          <div class="rc-title">AI Costs</div>
-          <div class="rc-subtitle">All Tools · Portfolio View</div>
+        <div class="principle-grid">
+          <article class="principle">
+            <span class="icon" aria-hidden="true">3</span>
+            <h3>A rating of 3 is strong performance</h3>
+            <p>
+              A 3 means the individual consistently meets expectations, delivers reliable outcomes,
+              and operates independently at the expected scope.
+            </p>
+          </article>
+          <article class="principle">
+            <span class="icon" aria-hidden="true">4+</span>
+            <h3>Ratings above 3 require sustained stretch</h3>
+            <p>
+              A 4 reflects consistently stronger outcomes within or adjacent to normal role scope. A 5 reflects
+              sustained, role-defining contribution that materially raises the bar for peers.
+            </p>
+          </article>
+          <article class="principle">
+            <span class="icon" aria-hidden="true">2</span>
+            <h3>Ratings below 3 reflect inconsistency</h3>
+            <p>
+              A 2 means expectations are only partially met. A 1 should be reserved for sustained,
+              significant underperformance with prior feedback and follow-up.
+            </p>
+          </article>
         </div>
-      </div>
-      <div class="rc-body">License cost analysis across all AI tools — per-seat rates, annual spend, contract renewals, and cost breakdown by user, department, and division.</div>
-      <div class="rc-footer"><span class="tag tag-orange">Cost Report</span><span>→</span></div>
-    </a>
+      </section>
 
-  </div>
-</div>
+      <section id="scoring" class="section scoring-section" aria-labelledby="scoring-title">
+        <div class="section-heading">
+          <p class="eyebrow">Scoring judgement</p>
+          <h2 id="scoring-title">When to test the next score</h2>
+          <p>
+            Supporting questions are evidence prompts, not a numeric checklist. Use them to decide whether
+            to stay at the current anchor or test the next one up or down.
+          </p>
+        </div>
+        <div class="scoring-grid">
+          <article class="scoring-card">
+            <span class="scoring-step">1</span>
+            <h3>Start at 3</h3>
+            <p>
+              First decide whether the employee consistently met the expected role standard for this driver.
+              If the answer is broadly yes, and there are no material gaps, 3 is the likely anchor.
+            </p>
+          </article>
+          <article class="scoring-card">
+            <span class="scoring-step">2</span>
+            <h3>Use yes answers as signals</h3>
+            <p>
+              If roughly 80% or more of the current anchor questions are supported by evidence, test the next
+              score. If the missing answer relates to a critical expectation, stay at the lower anchor.
+            </p>
+          </article>
+          <article class="scoring-card">
+            <span class="scoring-step">3</span>
+            <h3>Raise only with stronger evidence</h3>
+            <p>
+              Move from 3 to 4 only when performance is sustained beyond expectations. Move from 4 to 5 only
+              when contribution is exceptional, role-defining, and recognised beyond isolated moments.
+            </p>
+          </article>
+          <article class="scoring-card">
+            <span class="scoring-step">4</span>
+            <h3>Lower when gaps are material</h3>
+            <p>
+              Test 2 when expected behaviours or outcomes are inconsistent. Test 1 only when gaps are serious,
+              sustained, and supported by clear feedback, intervention, and documented follow-up.
+            </p>
+          </article>
+        </div>
+        <aside class="scoring-note">
+          <strong>Example:</strong> If a manager answers 5 out of 6 questions as yes, that is a prompt to
+          examine the next rating anchor. It is not an automatic score increase. The final rating depends on
+          whether the missing question is role-critical and whether the higher anchor is supported by sustained,
+          comparable evidence.
+        </aside>
+      </section>
 
-<footer>Omada A/S &nbsp;|&nbsp; AI Reporting Portal &nbsp;|&nbsp; Confidential</footer>
-</body>
+      <section id="drivers" class="section driver-workbench" aria-labelledby="drivers-title">
+        <div class="section-heading">
+          <p class="eyebrow">Six key drivers</p>
+          <h2 id="drivers-title">Driver-by-driver scoring support</h2>
+          <p>
+            Each driver combines universal calibration questions, rating anchors, and evidence
+            indicators for consistent manager judgement.
+          </p>
+        </div>
+
+        <div class="driver-layout">
+          <div class="driver-tabs" role="tablist" aria-label="Performance drivers"></div>
+          <article
+            id="driver-panel"
+            class="driver-panel"
+            role="tabpanel"
+            aria-live="polite"
+            aria-labelledby="driver-tab-0"
+          ></article>
+        </div>
+      </section>
+
+      <section id="scale" class="section scale-section" aria-labelledby="scale-title">
+        <div class="section-heading">
+          <p class="eyebrow">Rating scale</p>
+          <h2 id="scale-title">Compare the 1-5 anchors</h2>
+        </div>
+        <div class="scale-grid"></div>
+      </section>
+
+      <section id="guidance" class="section guidance-section" aria-labelledby="guidance-title">
+        <div class="section-heading">
+          <p class="eyebrow">Calibration guidance</p>
+          <h2 id="guidance-title">Questions that sharpen judgement</h2>
+        </div>
+        <div class="guidance-grid"></div>
+      </section>
+
+      <section id="evidence" class="section evidence-section" aria-labelledby="evidence-title">
+        <div class="section-heading">
+          <p class="eyebrow">Evidence expectations</p>
+          <h2 id="evidence-title">Ground ratings in observable patterns</h2>
+          <p>
+            Strong evidence is specific, role-relevant, comparable across employees, and connected to outcomes
+            or behaviours over the review period.
+          </p>
+        </div>
+        <div class="evidence-standards" aria-label="Evidence quality standards">
+          <article>
+            <h3>Specific</h3>
+            <p>Name the outcome, behaviour, context, timing, and impact.</p>
+          </article>
+          <article>
+            <h3>Comparable</h3>
+            <p>Use the same role-level criteria and similar evidence types across comparable employees.</p>
+          </article>
+          <article>
+            <h3>Sustained</h3>
+            <p>Look for patterns across the review period, not one recent or highly visible moment.</p>
+          </article>
+          <article>
+            <h3>Relevant</h3>
+            <p>Anchor the rating in work outcomes, judgement, behaviours, and role expectations.</p>
+          </article>
+        </div>
+        <div class="evidence-columns">
+          <article>
+            <h3>Use evidence such as</h3>
+            <ul id="positive-evidence"></ul>
+          </article>
+          <article>
+            <h3>Avoid relying primarily on</h3>
+            <ul id="avoid-evidence"></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Use this guide as a framework for judgement, not a checklist. High-quality ratings combine
+        observable evidence, consistent standards, role-level expectations, and calibration with peers
+        and leaders.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
