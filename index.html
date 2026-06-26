@@ -3,239 +3,244 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Omada Performance Ratings</title>
+    <title>Omada Performance Review</title>
     <meta
       name="description"
-      content="A practical guide for managers using performance drivers, rating anchors, and evidence-based calibration questions."
+      content="Choose the performance review guide that fits your role at Omada."
     >
-    <link rel="stylesheet" href="styles.css">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172033;
+        --muted: #5d687b;
+        --soft: #f3f6fa;
+        --panel: #ffffff;
+        --line: #dce3ec;
+        --blue: #17446f;
+        --blue-ink: #0f304f;
+        --teal: #167064;
+        --shadow: 0 18px 40px rgba(23, 32, 51, 0.08);
+        --radius: 8px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #f8fafc;
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: min(960px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 22px 0;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--soft);
+        color: var(--blue);
+        font-weight: 800;
+      }
+
+      .brand strong,
+      .brand small {
+        display: block;
+      }
+
+      .brand small {
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      main {
+        flex: 1;
+        width: min(960px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 40px 0 64px;
+      }
+
+      .intro {
+        max-width: 640px;
+        margin-bottom: 40px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--teal);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.6rem;
+        line-height: 1.14;
+      }
+
+      .intro p {
+        margin: 16px 0 0;
+        color: var(--muted);
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-top: 7px solid var(--teal);
+        border-radius: var(--radius);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        padding: 26px;
+      }
+
+      .card:nth-child(2) {
+        border-top-color: var(--blue);
+      }
+
+      .card .tag {
+        display: inline-flex;
+        align-self: flex-start;
+        align-items: center;
+        border-radius: var(--radius);
+        background: var(--soft);
+        color: var(--blue);
+        padding: 5px 10px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .card h2 {
+        margin: 16px 0 0;
+        font-size: 1.45rem;
+      }
+
+      .card p {
+        margin: 10px 0 22px;
+        color: var(--muted);
+      }
+
+      .card .button {
+        display: inline-flex;
+        align-self: flex-start;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius);
+        background: var(--blue);
+        color: #ffffff;
+        padding: 10px 18px;
+        font-weight: 800;
+        margin-top: auto;
+      }
+
+      .card .button:hover,
+      .card .button:focus-visible {
+        background: var(--blue-ink);
+        outline: none;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        background: #ffffff;
+        color: var(--muted);
+        padding: 24px 20px;
+        text-align: center;
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 720px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header">
+    <header>
       <nav class="topbar" aria-label="Primary navigation">
-        <a class="brand" href="#overview" aria-label="Omada Performance Ratings home">
+        <a class="brand" href="/" aria-label="Omada Performance Review home"
+          style="display:inline-flex;align-items:center;gap:12px;">
           <span class="brand-mark" aria-hidden="true">OP</span>
           <span>
-            <strong>Omada Performance Ratings</strong>
-            <small>Performance rating guide</small>
+            <strong>Omada Performance Review</strong>
+            <small>Guide selection</small>
           </span>
         </a>
-        <div class="nav-links">
-          <a href="#drivers">Drivers</a>
-          <a href="#scoring">Scoring</a>
-          <a href="#scale">Rating Scale</a>
-          <a href="#guidance">Guidance</a>
-          <a href="#evidence">Evidence</a>
-        </div>
       </nav>
-
-      <section id="overview" class="hero" aria-labelledby="page-title">
-        <div class="hero-content">
-          <p class="eyebrow">Performance ratings reference</p>
-          <h1 id="page-title">Calibrate performance ratings with clearer evidence and judgement.</h1>
-          <p class="hero-copy">
-            Use the six key drivers, rating anchors, and supporting questions to evaluate sustained performance
-            relative to role expectations, not isolated successes, setbacks, visibility, communication style,
-            or personality traits.
-          </p>
-          <div class="hero-actions" aria-label="Quick actions">
-            <a class="button primary" href="#drivers">Explore drivers</a>
-            <a class="button secondary" href="#scale">Compare ratings</a>
-          </div>
-        </div>
-        <aside class="rating-visual" aria-label="Rating principles summary">
-          <div class="rating-steps">
-            <div class="rating-step low">
-              <span>1-2</span>
-              <strong>Below Expectations</strong>
-              <small>Inconsistent or sustained underperformance</small>
-            </div>
-            <div class="rating-step anchor">
-              <span>3</span>
-              <strong>Strong Performance</strong>
-              <small>Fully successful at expected role scope</small>
-            </div>
-            <div class="rating-step high">
-              <span>4-5</span>
-              <strong>Stretch Performance</strong>
-              <small>Sustained impact beyond expectations</small>
-            </div>
-          </div>
-        </aside>
-      </section>
     </header>
 
     <main>
-      <section class="section principles" aria-labelledby="principles-title">
-        <div class="section-heading">
-          <p class="eyebrow">Rating philosophy</p>
-          <h2 id="principles-title">The calibration baseline</h2>
-        </div>
-        <div class="principle-grid">
-          <article class="principle">
-            <span class="icon" aria-hidden="true">3</span>
-            <h3>A rating of 3 is strong performance</h3>
-            <p>
-              A 3 means the individual consistently meets expectations, delivers reliable outcomes,
-              and operates independently at the expected scope.
-            </p>
-          </article>
-          <article class="principle">
-            <span class="icon" aria-hidden="true">4+</span>
-            <h3>Ratings above 3 require sustained stretch</h3>
-            <p>
-              A 4 reflects consistently stronger outcomes within or adjacent to normal role scope. A 5 reflects
-              sustained, role-defining contribution that materially raises the bar for peers.
-            </p>
-          </article>
-          <article class="principle">
-            <span class="icon" aria-hidden="true">2</span>
-            <h3>Ratings below 3 reflect inconsistency</h3>
-            <p>
-              A 2 means expectations are only partially met. A 1 should be reserved for sustained,
-              significant underperformance with prior feedback and follow-up.
-            </p>
-          </article>
-        </div>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Performance review</p>
+        <h1 id="page-title">Choose the guide that fits your role.</h1>
+        <p>
+          Both guides use the same six key drivers and the same 1-5 rating
+          scale. Pick the version that matches how you are using it.
+        </p>
       </section>
 
-      <section id="scoring" class="section scoring-section" aria-labelledby="scoring-title">
-        <div class="section-heading">
-          <p class="eyebrow">Scoring judgement</p>
-          <h2 id="scoring-title">When to test the next score</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">Employee</span>
+          <h2>Self-assessment guide</h2>
           <p>
-            Supporting questions are evidence prompts, not a numeric checklist. Use them to decide whether
-            to stay at the current anchor or test the next one up or down.
+            Reflect on your own performance with first-person rating anchors
+            and evidence prompts before your review conversation.
           </p>
-        </div>
-        <div class="scoring-grid">
-          <article class="scoring-card">
-            <span class="scoring-step">1</span>
-            <h3>Start at 3</h3>
-            <p>
-              First decide whether the employee consistently met the expected role standard for this driver.
-              If the answer is broadly yes, and there are no material gaps, 3 is the likely anchor.
-            </p>
-          </article>
-          <article class="scoring-card">
-            <span class="scoring-step">2</span>
-            <h3>Use yes answers as signals</h3>
-            <p>
-              If roughly 80% or more of the current anchor questions are supported by evidence, test the next
-              score. If the missing answer relates to a critical expectation, stay at the lower anchor.
-            </p>
-          </article>
-          <article class="scoring-card">
-            <span class="scoring-step">3</span>
-            <h3>Raise only with stronger evidence</h3>
-            <p>
-              Move from 3 to 4 only when performance is sustained beyond expectations. Move from 4 to 5 only
-              when contribution is exceptional, role-defining, and recognised beyond isolated moments.
-            </p>
-          </article>
-          <article class="scoring-card">
-            <span class="scoring-step">4</span>
-            <h3>Lower when gaps are material</h3>
-            <p>
-              Test 2 when expected behaviours or outcomes are inconsistent. Test 1 only when gaps are serious,
-              sustained, and supported by clear feedback, intervention, and documented follow-up.
-            </p>
-          </article>
-        </div>
-        <aside class="scoring-note">
-          <strong>Example:</strong> If a manager answers 5 out of 6 questions as yes, that is a prompt to
-          examine the next rating anchor. It is not an automatic score increase. The final rating depends on
-          whether the missing question is role-critical and whether the higher anchor is supported by sustained,
-          comparable evidence.
-        </aside>
-      </section>
+          <a class="button" href="/employee/">Open employee guide</a>
+        </article>
 
-      <section id="drivers" class="section driver-workbench" aria-labelledby="drivers-title">
-        <div class="section-heading">
-          <p class="eyebrow">Six key drivers</p>
-          <h2 id="drivers-title">Driver-by-driver scoring support</h2>
+        <article class="card">
+          <span class="tag">Manager</span>
+          <h2>Performance ratings guide</h2>
           <p>
-            Each driver combines universal calibration questions, rating anchors, and evidence
-            indicators for consistent manager judgement.
+            Calibrate ratings with driver scoring support, anchors, and
+            evidence-based questions for consistent judgement.
           </p>
-        </div>
-
-        <div class="driver-layout">
-          <div class="driver-tabs" role="tablist" aria-label="Performance drivers"></div>
-          <article
-            id="driver-panel"
-            class="driver-panel"
-            role="tabpanel"
-            aria-live="polite"
-            aria-labelledby="driver-tab-0"
-          ></article>
-        </div>
-      </section>
-
-      <section id="scale" class="section scale-section" aria-labelledby="scale-title">
-        <div class="section-heading">
-          <p class="eyebrow">Rating scale</p>
-          <h2 id="scale-title">Compare the 1-5 anchors</h2>
-        </div>
-        <div class="scale-grid"></div>
-      </section>
-
-      <section id="guidance" class="section guidance-section" aria-labelledby="guidance-title">
-        <div class="section-heading">
-          <p class="eyebrow">Calibration guidance</p>
-          <h2 id="guidance-title">Questions that sharpen judgement</h2>
-        </div>
-        <div class="guidance-grid"></div>
-      </section>
-
-      <section id="evidence" class="section evidence-section" aria-labelledby="evidence-title">
-        <div class="section-heading">
-          <p class="eyebrow">Evidence expectations</p>
-          <h2 id="evidence-title">Ground ratings in observable patterns</h2>
-          <p>
-            Strong evidence is specific, role-relevant, comparable across employees, and connected to outcomes
-            or behaviours over the review period.
-          </p>
-        </div>
-        <div class="evidence-standards" aria-label="Evidence quality standards">
-          <article>
-            <h3>Specific</h3>
-            <p>Name the outcome, behaviour, context, timing, and impact.</p>
-          </article>
-          <article>
-            <h3>Comparable</h3>
-            <p>Use the same role-level criteria and similar evidence types across comparable employees.</p>
-          </article>
-          <article>
-            <h3>Sustained</h3>
-            <p>Look for patterns across the review period, not one recent or highly visible moment.</p>
-          </article>
-          <article>
-            <h3>Relevant</h3>
-            <p>Anchor the rating in work outcomes, judgement, behaviours, and role expectations.</p>
-          </article>
-        </div>
-        <div class="evidence-columns">
-          <article>
-            <h3>Use evidence such as</h3>
-            <ul id="positive-evidence"></ul>
-          </article>
-          <article>
-            <h3>Avoid relying primarily on</h3>
-            <ul id="avoid-evidence"></ul>
-          </article>
-        </div>
-      </section>
+          <a class="button" href="/manager/">Open manager guide</a>
+        </article>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <p>
-        Use this guide as a framework for judgement, not a checklist. High-quality ratings combine
-        observable evidence, consistent standards, role-level expectations, and calibration with peers
-        and leaders.
-      </p>
+      <p>Use the guide that matches your role. Both share the same drivers and rating scale.</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
